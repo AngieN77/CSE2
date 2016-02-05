@@ -25,22 +25,21 @@ public class Cyclometer {
         double feetToMile = 5280;           // assigns the conversion of 5280 feet in 1 mile to variable
         double inchesToFeet = 12;           // assigns the conversion of 12 inches in 1 foot to variable
         double secondsToMinutes = 60;       // assigns the conversion of 60 seconds in 1 minutes to variable
-        double trip1Distance, trip2Distance, totalDistance; // declares double variables for the distances 
-                                                            // of the trips and total distance
+        double trip1Distance, trip2Distance, totalDistance; // declares double variables for the distances of the trips and total distance
         // Printing out the information of each trip
         System.out.println ("The time for Trip 1 was " + (trip1Sec / secondsToMinutes) + // Print out the information for Trip 1
         " minutes and had " + (trip1Rotation) + " counts.");
         System.out.println ("The time for Trip 2 was " + (trip2Sec / secondsToMinutes) + // Print out the information for Trip 2
         " minutes and had " + (trip2Rotation) + " counts.");
         // Perform the calculations for distance traveled in miles and the total distance in mmiles
-        trip1Distance = (trip1Rotation * diameterWheel * PI);           // gives the distance traveled in inches
+        trip1Distance = (trip1Rotation * diameterWheel * PI);       // gives the distance traveled in inches
         trip1Distance = trip1Distance / inchesToFeet / feetToMile;  // gives the distance traveled in miles 
-        trip2Distance = (trip2Rotation * diameterWheel * PI);           // gives the distance traveled in inches
+        trip2Distance = (trip2Rotation * diameterWheel * PI);       // gives the distance traveled in inches
         trip2Distance = trip2Distance / inchesToFeet / feetToMile;  // gives the distance traveled in miles 
         totalDistance = trip1Distance + trip2Distance;                  // adds the two trip distances together for total distance traveled
         // Print out the distances traveled for each trip in miles
-        System.out.println ("The distance traveled for Trip 1 was " + (trip1Distance) + " miles.");
-        System.out.println ("The distance traveled for Trip 2 was " + (trip2Distance) + " miles.");
-        System.out.println ("The total distance traveled was " + (totalDistance) + " miles."); 
+        System.out.println ("The distance traveled for Trip 1 was " + (trip1Distance) + " miles."); // Print out the distance traveled for Trip 1 in miles
+        System.out.println ("The distance traveled for Trip 2 was " + (trip2Distance) + " miles."); // Print out the distance traveled for Trip 2 in miles
+        System.out.println ("The total distance traveled was " + (totalDistance) + " miles."); // Print out the total distance traveled in miles
     } // end of main method
 } // end of class
