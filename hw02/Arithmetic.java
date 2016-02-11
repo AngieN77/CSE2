@@ -21,20 +21,24 @@ public class Arithmetic {
         int beltNumber = 1;         // declare integer variable and assigning value of 1 for of belts
         double beltCost = 33.99;    // declare double variable and assigning value of 33.99 for cost of 1 belt
         double salesTax = 0.06;     // declare double variable and assigning value of 0.06 for PA sales tax
+        
         // Declaring other needed double variables for following calcuations
         double pantsTotal, shirtTotal, beltTotal, pantsTax, shirtTax, beltTax, totalBefore, totalTax, totalAfter;
         // Calculating the total cost of each kind of item before tax
         pantsTotal = pantsNumber * pantsCost;   // Calculating total cost of pants
         shirtTotal = shirtNumber * shirtCost;   // Calculating total cost of shirts
         beltTotal = beltCost;                   // Assigning price of belt to total cost of belts
+        
         // Calculating the totals sales tax paid for each kind of item
         pantsTax = (int) (pantsTotal * salesTax * 100) / 100.0; // Calculating the sales tax on pants
         shirtTax = (int) (shirtTotal * salesTax * 100) / 100.0; // Calculating the sales tax on shirts
         beltTax = (int) (beltTotal * salesTax * 100) / 100.0;   // Calculating the sales tax on belts
+        
          // Calulating the total amounts
         totalBefore = pantsTotal + shirtTotal + beltTotal;  // Calculating the total cost before tax
         totalTax = pantsTax + shirtTax + beltTax;           // Calculating the total cost of ssales tax
         totalAfter = totalBefore + totalTax;                // Calculating the total cost including sales tax
+        
         // Printing out the total cost of each item and their sales tax and the total costs of the purchase
         System.out.println ("The total cost for the pants is $" + (pantsTotal) + " with a sales tax of $" + (pantsTax) + ".");
         System.out.println ("The total cost for the shirts is $" + (shirtTotal) + " with a sales tax of $" + (shirtTax) + ".");
