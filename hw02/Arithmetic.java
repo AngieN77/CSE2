@@ -38,6 +38,7 @@ public class Arithmetic {
         totalBefore = pantsTotal + shirtTotal + beltTotal;  // Calculating the total cost before tax
         totalTax = pantsTax + shirtTax + beltTax;           // Calculating the total cost of ssales tax
         totalAfter = totalBefore + totalTax;                // Calculating the total cost including sales tax
+        
         // Printing out the total cost of each item and their sales tax and the total costs of the purchase
         System.out.println ("The total cost for the pants is $" + (pantsTotal) + " with a sales tax of $" + (pantsTax) + ".");
         System.out.println ("The total cost for the shirts is $" + (shirtTotal) + " with a sales tax of $" + (shirtTax) + ".");
