@@ -15,12 +15,12 @@ public class Convert {
         Scanner convert;                                        // Declare an instance of the Scanner class named convert
         convert = new Scanner (System.in);                      // Construct the instance
         
-        System.out.println ("Enter a measurement in meters: "); // Ask the user for an input value for the number of meters
+        System.out.print ("Enter a measurement in meters: "); // Ask the user for an input value for the number of meters
         double meters = convert.nextDouble();                   // Assign the input value from Scanner to the double variable meters
         double inches = meters / inchesToMeters;                // Converting from meters to inches
         
         inches = (int) (inches * 100) / 100.0;                  // Truncate decimal places that are not needed
         // Print out the converted value from meters to inches
-        System.out.println ((meters) + " meters is about " + (inches) + " in inches."); 
+        System.out.println ((meters) + " meters is about " + (inches) + " inches."); 
     }
 }

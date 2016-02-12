@@ -12,13 +12,13 @@ public class Pyramid {
         Scanner pyramidDimension;                                                   // Declare an instance of the Scanner class named pyramdDimension
         pyramidDimension = new Scanner (System.in);                                 // Construct the instance of the class
         
-        System.out.println ("Enter the height of the pyramid: ");                   // Ask the user for an input value for the height of the pyramid
+        System.out.print ("Enter the height of the pyramid: ");                   // Ask the user for an input value for the height of the pyramid
         double height = pyramidDimension.nextDouble();                              // Assign the input value in the double variable named height
         
-        System.out.println ("Enter the length of one side on the base: ");          // Ask the user for an input value for length for one side of the base
+        System.out.print ("Enter the length of one side on the base: ");          // Ask the user for an input value for length for one side of the base
         double side1 = pyramidDimension.nextDouble();                               // Assign the input value in the double variable named side1
         
-        System.out.println ("Enter the length of the other side of the base: ");    // Ask the user for an input value for length of the other side of the base
+        System.out.print ("Enter the length of the other side of the base: ");    // Ask the user for an input value for length of the other side of the base
         double side2 = pyramidDimension.nextDouble();                               // Assign the input bvalue in the double variable named side2
         
         double volume = height * side1 * side2 / 3;                                 // Calculate the volume of pyramid with the given dimensions
