@@ -30,7 +30,7 @@ public class CardGenerator {
                 case 12:
                     System.out.println ("You picked the Queen of " + cardSuit + ".");               // Prints out statement for Queen of Diamonds if the remainder is 12
                     break;
-                case 13:
+                case 0:
                     System.out.println ("You picked the King of " + cardSuit + ".");                // Prints out statement for King of Diamonds if the remainder is 13
                     break;
                 default:                                                                            // Prints the general statement for a number value card with its corresponding suit
@@ -38,6 +38,7 @@ public class CardGenerator {
                     break;
             }
         }
+        
         if (cardNumber >= 14 && cardNumber <= 26) {                                                 // Assigns cardSuit to Clubs if the number is between 14 and 26
            cardSuit = "Clubs";
            cardFace = (int) cardNumber % 13;
@@ -51,7 +52,7 @@ public class CardGenerator {
                 case 12:
                     System.out.println ("You picked the Queen of " + cardSuit + ".");               // Prints out statement for Clubs of Clubs if the remainder is 12
                     break;
-                case 13:
+                case 0:
                     System.out.println ("You picked the King of " + cardSuit + ".");                // Prints out statement for King of Clubs if the remainder is 13
                     break;
                 default:                                                                            // Prints the general statement for a number value card with its corresponding suit
@@ -59,6 +60,7 @@ public class CardGenerator {
                     break;
             }
         }
+        
         if (cardNumber >= 27 && cardNumber <= 39) {                                                 // Assigns cardSuit to Hearts if the number is between 27 and 39
            cardSuit = "Hearts";             
            cardFace = (int) cardNumber % 13;                                                        // Determines the cardFace by determining the remainder of card suit divided by 13
@@ -72,7 +74,7 @@ public class CardGenerator {
                 case 12:
                     System.out.println ("You picked the Queen of " + cardSuit + ".");               // Prints out statement for Clubs of Hearts if the remainder is 12
                     break;
-                case 13:
+                case 0:
                     System.out.println ("You picked the King of " + cardSuit + ".");                // Prints out statement for King of Hearts if the remainder is 13
                     break;
                 default:                                                                            // Prints the general statement for a number value card with its corresponding suit
@@ -80,6 +82,7 @@ public class CardGenerator {
                     break;
             }
         }
+        
         if (cardNumber >= 40 && cardNumber <= 52) {                                                 // Assigns cardSuit to Spades if the number is between 40 and 52
            cardSuit = "Spades";
            cardFace = (int) cardNumber % 13;                                                        // Determines the cardFace by determining the remainder of card suit divided by 13
@@ -93,7 +96,7 @@ public class CardGenerator {
                 case 12:
                     System.out.println ("You picked the Queen of " + cardSuit + ".");               // Prints out statement for Clubs of Spades if the remainder is 12
                     break;
-                case 13:
+                case 0:
                     System.out.println ("You picked the King of " + cardSuit + ".");                // Prints out statement for King of Spades if the remainder is 13
                     break;
                 default:                                                                            // Prints the general statement for a number value card with its corresponding suit
