@@ -149,7 +149,7 @@ public class ToHex {
             if (number3 >= 0 && number3 <= 255) {                                                               // Check to see if number3 is within 0 - 255
             value3 = (number3 / 16);                                                                            // Divide number3 by 16 and store as value3
             remainder3 = number3 % 16;                                                                          // Divide number3 by 16 but store the remainder as remainder3
-            switch (value3) {                                                                                   // Switch statement for value3
+            switch (value2) {                                                                                   // Switch statement for value3
                 case 10:                                                                                        // If value3 = 10, 
                     hexa5 = "A";                                                                                // then set hexa5 as A               
                     break;                                                                                      // Leave the switch statement
