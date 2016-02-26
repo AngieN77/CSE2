@@ -20,7 +20,7 @@ public class Check {
         System.out.print ("Enter the cost of the check in the form XX.XX: $");                          // Ask the user for the cost of the check
         double cost = myScanner.nextDouble();                                                           // Assign the value to the double variable cost
         System.out.print ("Enter the wished percentage tip that is to be paid as a whole number: ");    // Ask the user for the perecentage tip
-        double tip = myScanner.nextDouble();                                                                  // Assign the value to the integer varible tip
+        double tip = myScanner.nextDouble();                                                            // Assign the value to the integer varible tip
         tip /= 100;
         System.out.print ("Enter the number of people that the check will be split between: ");         // Ask the user for the amount of people splitting the check
         int numberPeople = myScanner.nextInt();                                                         // Assign the value to the integer variable numberPeople
