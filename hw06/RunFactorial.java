@@ -14,7 +14,7 @@ public class RunFactorial {
         Scanner integer;                                                                // Declare an instance of Scanner class named integer
         
         boolean number = false;                                                         // Declare and initialize boolean variable for use in while loop
-        int value = 0, counter = 1, stop  = 0;                                          // Declare and initialize variables for future use in variables
+        long value = 0, counter = 1, stop = 0;                                          // Declare and initialize variables for future use in variables
         
         while (number == false) {                                                       // Run while loop as long as number equals false
             integer = new Scanner (System.in);                                          // Construct instance of Scanner class
