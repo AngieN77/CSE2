@@ -1,3 +1,5 @@
+// Purpose: Determine the area of a trinagle, rectangle, or circle
+
 import java.util.Scanner;
 
 public class Geometry {

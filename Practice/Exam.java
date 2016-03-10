@@ -1,3 +1,5 @@
+// Purpose: Troubleshoot exam problems
+
 import java.util.Scanner;
 
 public class Exam {

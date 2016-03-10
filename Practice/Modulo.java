@@ -1,3 +1,5 @@
+// Purpose: Practice the use of modulo for Card Generator
+
 public class Modulo {
     public static void main (String[] args) {
         int test1 = 1 % 13;

@@ -1,3 +1,5 @@
+// Purpose: Practice using Math.random (Random Number Generator)
+
 import java.util.Random;
 
 public class RandomNumber {

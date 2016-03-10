@@ -1,3 +1,5 @@
+// Purpose: Troubleshoot Exam 1 problems
+
 public class Exam1 {
     public static void main (String[] args) {
         char val;

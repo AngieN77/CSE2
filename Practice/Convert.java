@@ -1,3 +1,5 @@
+// Purpose: Convert certain binary numbers into integers
+
 import java.util.Scanner;
 
 public class Convert {

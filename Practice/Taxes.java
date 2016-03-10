@@ -1,3 +1,5 @@
+// Purpose: Determine how much net income a person has after taxes
+
 import java.util.Scanner;
 
 public class Taxes {

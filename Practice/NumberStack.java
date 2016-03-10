@@ -1,3 +1,6 @@
+// Purpose: Learning to convert from for loops, to while loops, and do-while loops
+//          to print out number stacks
+
 import java.util.Scanner;
 
 public class NumberStack {

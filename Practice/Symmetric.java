@@ -1,3 +1,6 @@
+// Purpose: Determining if a number is symmetric
+//          Rewriting a number backwards
+
 import java.util.Scanner;
 
 public class Symmetric {

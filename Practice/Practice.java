@@ -1,3 +1,5 @@
+// Purpose: Ordering food from a menu
+
 import java.util.Scanner;
 
 public class Practice {
