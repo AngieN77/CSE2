@@ -15,10 +15,10 @@ public class Story {
     
     public static String article1() {                                           // Method to randomly pick a random article
         Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named randomGenerator
-        int randomInt = randomGenerator.nextInt(2);                             // Assign randomInt a random integer from randomGenerator from 0-2
+        int randomInt = randomGenerator.nextInt(3);                             // Assign randomInt a random integer from randomGenerator from 0-3
         String word = " ";                                                      // Declare and initialize a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-2) is generated
+            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-3) is generated
                 word = "The ";
                 break;
             case 1:
@@ -32,10 +32,10 @@ public class Story {
     }
     public static String adjective() {                                          // Method to randomly pick a random adjective
         Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
-        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        int randomInt = randomGenerator.nextInt(10);                             // Assign randomInt a random integer from randomGenerator from 0-10
         String word = " ";                                                      // Declare and initialze a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which adjective is picked based off of which number (0-9) is generated
+            case 0:                                                             // Following lines: Defines which adjective is picked based off of which number (0-10) is generated
                 word = "horrid";
                 break;
             case 1:
@@ -70,10 +70,10 @@ public class Story {
     }
     public static String subject() {                                            // Method to randomly pick a random subject
        Random randomGenerator = new Random();                                   // Declare and construct an instance of Random class named RandomGenerator
-        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        int randomInt = randomGenerator.nextInt(10);                             // Assign randomInt a random integer from randomGenerator from 0-10
         String word = " ";                                                      // Declare and initialze a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-9) is generated
+            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-10) is generated
                 word = "dog ";
                 break;
             case 1:
@@ -108,10 +108,10 @@ public class Story {
     }
     public static String verb() {                                               // Method to randomly pick a random verb
         Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
-        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        int randomInt = randomGenerator.nextInt(10);                             // Assign randomInt a random integer from randomGenerator from 0-10
         String word = " ";                                                      // Declare and initialze a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-9) is generated
+            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-10) is generated
                 word = "coddled ";
                 break;
             case 1:
@@ -146,10 +146,10 @@ public class Story {
     }
     public static String article2() {                                           // Method to randomly pick a second article
         Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
-        int randomInt = randomGenerator.nextInt(2);                             // Assign randomInt a random integer from randomGenerator from 0-2
+        int randomInt = randomGenerator.nextInt(3);                             // Assign randomInt a random integer from randomGenerator from 0-3
         String word = " ";                                                      // Declare and initialze a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-2) is generated
+            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-3) is generated
                 word = "the ";
                 break;
             case 1:
@@ -163,10 +163,10 @@ public class Story {
     }
     public static String object() {                                             // Method to choose a random object
         Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
-        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        int randomInt = randomGenerator.nextInt(10);                             // Assign randomInt a random integer from randomGenerator from 0-10
         String word = " ";                                                      // Declare and initialze a string variable named word with a space
         switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
-            case 0:                                                             // Following lines: Defines which object is picked based off of which number (0-9) is generated
+            case 0:                                                             // Following lines: Defines which object is picked based off of which number (0-10) is generated
                 word = "blueberry pancake.";
                 break;
             case 1:
