@@ -7,17 +7,18 @@
 //          Each method should generate a random integer from 0-9
 //          Select a random adjective//subject/verb/object from switch statement
 //          Return the word as a string
-import java.util.Random;
+
+import java.util.Random;                                                        // Import needed Random and Scanner classes
 import java.util.Scanner;
 
 public class Story {
     
-    public static String article1() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(2);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String article1() {                                           // Method to randomly pick a random article
+        Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named randomGenerator
+        int randomInt = randomGenerator.nextInt(2);                             // Assign randomInt a random integer from randomGenerator from 0-2
+        String word = " ";                                                      // Declare and initialize a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-2) is generated
                 word = "The ";
                 break;
             case 1:
@@ -27,14 +28,14 @@ public class Story {
                 word = "This ";
                 break;
            }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to adjective() in main method (word1)
     }
-    public static String adjective() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(9);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String adjective() {                                          // Method to randomly pick a random adjective
+        Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
+        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        String word = " ";                                                      // Declare and initialze a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which adjective is picked based off of which number (0-9) is generated
                 word = "horrid";
                 break;
             case 1:
@@ -65,14 +66,14 @@ public class Story {
                 word = "jovial ";
                 break;
         }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to adjective() in the main method
     }
-    public static String subject() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(9);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String subject() {                                            // Method to randomly pick a random subject
+       Random randomGenerator = new Random();                                   // Declare and construct an instance of Random class named RandomGenerator
+        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        String word = " ";                                                      // Declare and initialze a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-9) is generated
                 word = "dog ";
                 break;
             case 1:
@@ -103,14 +104,14 @@ public class Story {
                 word = "zebra ";
                 break;
         }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to subject() in the main method
     }
-    public static String verb() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(9);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String verb() {                                               // Method to randomly pick a random verb
+        Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
+        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        String word = " ";                                                      // Declare and initialze a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which verb is picked based off of which number (0-9) is generated
                 word = "coddled ";
                 break;
             case 1:
@@ -141,14 +142,14 @@ public class Story {
                 word = "annoyed ";
                 break;
         }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to verb() in the main method
     }
-    public static String article2() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(2);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String article2() {                                           // Method to randomly pick a second article
+        Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
+        int randomInt = randomGenerator.nextInt(2);                             // Assign randomInt a random integer from randomGenerator from 0-2
+        String word = " ";                                                      // Declare and initialze a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which article is picked based off of which number (0-2) is generated
                 word = "the ";
                 break;
             case 1:
@@ -158,14 +159,14 @@ public class Story {
                 word = "this ";
                 break;
         }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to article2() in the main method
     }
-    public static String object() {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(9);
-        String word = " ";
-        switch (randomInt) {
-            case 0:
+    public static String object() {                                             // Method to choose a random object
+        Random randomGenerator = new Random();                                  // Declare and construct an instance of Random class named RandomGenerator
+        int randomInt = randomGenerator.nextInt(9);                             // Assign randomInt a random integer from randomGenerator from 0-9
+        String word = " ";                                                      // Declare and initialze a string variable named word with a space
+        switch (randomInt) {                                                    // Switch statement based off of randomInt to determine which word will be chosen
+            case 0:                                                             // Following lines: Defines which object is picked based off of which number (0-9) is generated
                 word = "blueberry pancake.";
                 break;
             case 1:
@@ -196,34 +197,33 @@ public class Story {
                 word = "graceful giraffe.";
                 break;
         }
-        return word;
+        return word;                                                            // Returns the word picked to the variable assigned to article2() in the main method
     }
 
     public static void main(String[] args) {
-        Scanner question;
-        question = new Scanner(System.in);
+        Scanner question;                                                       // Declare an instance of the Scanner class named question
+        question = new Scanner(System.in);                                      // Construct an instance of the Scanner class
 
-        while (true) {
-            String word1, word2, word3, word4, word5, word6;
+        while (true) {                                                          // While loop --> To continue program when user says yes
+            String word1, word2, word3, word4, word5, word6;                    // Declare needed variable to generate sentence
             
-            word1 = article1();
-            word2 = adjective();
-            word3 = subject();
-            word4 = verb();
-            word5 = article2();
-            word6 = object();
-
-            System.out.println (word1 + word2 + word3 +  word4 + word5 + word6);
-            System.out.print("Do you want to continue generating another sentence? ");
-            String answer = " ";
-            answer = question.next();
-            if (answer.equals("y") || answer.equals("Y")) {
-                continue;
-                
-            }
-            else {
-                System.out.println("You have exited the random sentence generator.");
-                break;
+            word1 = article1();                                                 // Call article1 method to assign a word to word1
+            word2 = adjective();                                                // Call adjective method to assign a word to word2
+            word3 = subject();                                                  // Call subject method to assign a word to word3
+            word4 = verb();                                                     // Call verb method to assign a word to word4
+            word5 = article2();                                                 // Call article2 method to assign a word to word5
+            word6 = object();                                                   // Call object method to assign a word to word6
+    
+            System.out.println (word1 + word2 + word3 +  word4 + word5 + word6);        // Print out sentence generated from above methods
+            System.out.print("Do you want to continue generating another sentence? ");  // Ask user for input to continue program or not
+            String answer = " ";                                                        // Declare and initialize a string variable named answer with a space
+            answer = question.next();                                                   // Assign answer with the input of the user
+            if (answer.equals("y") || answer.equals("Y")) {                             // Check if answer is equal to "y" or "Y"
+                continue;                                                               // Answer is either "y" or "Y" --> Continue with the program
+            }   
+            else {                                                                      // Answer is not "y" or "Y"
+                System.out.println("You have exited the random sentence generator.");   // Print out statement
+                break;                                                                  // Leave the while loop --> Ends program
             }
         }
     }
