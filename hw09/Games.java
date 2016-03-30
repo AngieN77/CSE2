@@ -119,8 +119,25 @@ public class Games {
             System.out.println ("combination of color and number. Please come again. \n");
         }
     }
-    public static void scrambler() {
-        
+    public static void scrambler() {                                            // Method for Scrambler game
+        Scanner input = new Scanner(System.in);                                 // Declare and construct an instance of Scanner named inpit
+        String word = " ";                                                      // Declare and initialize a string variabled named with a space
+        int length = 0;                                                         // Declare and initialize an integer length with a default size of 0
+        System.out.print("Please enter the desired word to be scrambled: ");    // Ask the user for a word to be scrambled
+        word = input.next();                                                    // Assign the input to word
+        length = word.length();                                                 // Assign the count for the number of characters in word as length
+        int range = length - 1;                                                 // Declare and initialize an integer variable named ranged with length - 1
+
+        char[] swap = word.toCharArray();                                       // Assign the value in word into an array named swap
+        for (int i = 0; i < range; i = i + 2) {                                 // For loop --> Determines which letters should be switched 
+            char temp = swap[i];                                                // Assign the character assigned to position i to char variable named temp
+            swap[i] = swap[i + 1];                                              // Assign the character in position (i + 1) to position i
+            swap[i + 1] = temp;                                                 // Assign the character in temp (previously in position i) to position (i + 1)
+        }
+
+        System.out.println ("The given word scrambled is: ");                   // Print out statement
+        System.out.println (swap);                                              // Print out the scrambled word
+        System.out.println (" ");                                               // Print out a new line
     }
     public static String continueArcade() {                                     // Method for asking whether to continue in arcade
         Scanner question = new Scanner(System.in);                              // Declare and construct an instance of Scanner named question
