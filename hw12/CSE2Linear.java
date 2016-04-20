@@ -21,155 +21,140 @@ import java.util.Arrays;
 
 public class CSE2Linear {
 
-    public static boolean sortedCheck(int[] grades) {                           
-        boolean valid = true;
-        Arrays.sort(grades);
-
-        for (int i = 1; i < grades.length - 1; i++) {
-            if (grades[i] >= grades[i - 1]) {
-                continue;
-            }
-            else {
-                System.out.println("One of the values was not greater than the other.");
-                valid = false;
-                break;
-            }
-        }
-        return valid;
-    }
-
-    public static void sortedSearch(int[] grades, int key) {                    // Method to linear
-        int beginning = 0;
+    public static void sortedSearch(int[] grades, int key) {                    // Method to binarily search for a given grade
+        int beginning = 0;                                                      // Declare and initialize needed variables for future use
         int end = grades.length - 1;
         int middle = 0;
         int counter = 0;
         boolean found = false;
 
-        while (beginning <= end) {
-            middle = (beginning + end) / 2;
-            if (key < grades[middle]) {
-                counter++;
-                end = middle - 1;
+        while (beginning <= end) {                                              // While loop --> Determines how many times the array can be halved
+            middle = (beginning + end) / 2;                                     // Reassign middle with the value of indicating the middle of array
+            if (key < grades[middle]) {                                         // If the key is less than the chosen middle of the array
+                counter++;                                                      // Increment counter by adding 1
+                end = middle - 1;                                               // Reassign the end of the half by subtracting 1 from the middle
             }
-            else if (key > grades[middle]) {
-                counter++;
-                beginning = middle + 1;
+            else if (key > grades[middle]) {                                    // If the key is greater than the chosen middle of the array
+                counter++;                                                      // Increment counter by adding 1
+                beginning = middle + 1;                                         // Reassign the beginning of the half by adding 1 to the middle
             }
-            else if (key == grades[middle]) {
-                counter++;
-                found = true;
-                break;
+            else if (key == grades[middle]) {                                   // If the key is equal to the chosen middle of the array
+                counter++;                                                      // Increment counter by adding 1
+                found = true;                                                   // Reassign found to be true
+                break;                                                          // Exit while looop
             }
         }
 
-        if (found == true) {
-            System.out.println(key + " was found in the list with " + counter + " iterations.");
+        if (found == true) {                                                    // If found is equal to true
+            System.out.print(key + " was found in the list with " );            // Print out statements
+            System.out.println(counter + " iterations.");
         }
-        else {
-            System.out.println(key + " was not found in the list with " + counter + " iterations.");
+        else {                                                                  // found is not equal to true
+            System.out.print(key + " was not found in the list with " );        // Print out statements
+            System.out.println(counter + " iterations.");
         }
     }
 
-    public static void scrambledSearch(int[] grades, int key) {
-        int counter = 0;
+    public static void scrambledSearch(int[] grades, int key) {                 // Method to linearly search for a given grade
+        int counter = 0;                                                        // Declare and initialize needed variables for future use
         boolean found = false;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == key) {
-                counter++;
-                found = true;
-                break;
-            }
-            else {
-                counter++;
-            }
-        }
         
-        if (found == true) {
-            System.out.println(key + " was found in the list with " + counter + " iterations.");
+        for (int i = 0; i < grades.length; i++) {                               // For loop --> Keeps track of how many members have been searched
+            if (grades[i] == key) {                                             // If the given array member is equal to key
+                counter++;                                                      // Increment counter by adding 1
+                found = true;                                                   // Reassign found to be true
+                break;                                                          // Exit for loop
+            }
+            else {                                                              // Given array member is not equal to key
+                counter++;                                                      // Increment counter by adding 1
+            }
         }
-        else {
-            System.out.println(key + " was not found in the list with " + counter + " iterations.");
+
+        if (found == true) {                                                    // If found is equal to true
+            System.out.print(key + " was found in the list with " );            // Print out statements
+            System.out.println(counter + " iterations.");   
+        }
+        else {                                                                  // found is not equal to true
+            System.out.print(key + " was not found in the list with " );        // Print out statements
+            System.out.println(counter + " iterations.");
         }
     }
 
     public static void main(String[] args) {
-        int[] examGrades = new int[15];
+        int[] examGrades = new int[15];                                         // Declare and allocate an integer array named examGrades with size 15
 
-        Scanner input = new Scanner(System.in);
-        int grade = 0;
-        boolean resume = true;
-        boolean loop = true;
+        Scanner input = new Scanner(System.in);                                 // Declare and initialize an instance of Scanner named input
+        int grade = 0;                                                          // Declare and initialize needed variables for future use
+        int i = 0;
+        int comparison = 0;
+        int searchGrade = 0;
 
-        while (resume == true) {
-            System.out.println("Enter 15 integers for final grades in CSE2: ");
+        System.out.println("Enter 15 integers for final grades in CSE2: ");     // Ask user to input 15 integers
 
-            for (int i = 0; i < 15; i++) {
-                if (input.hasNextInt()) {
-                    grade = input.nextInt();
-                    if (grade >= 0 && grade <= 100) {
-                        examGrades[i] = grade;
+            while (i < 15) {                                                    // While loop --> Keep track of how many array members have been reassigned
+                if (input.hasNextInt()) {                                       // If input has an integer
+                    grade = input.nextInt();                                    // Reassign the value of grade to be input value
+                    if (grade >= 0 && grade <= 100 && grade >= comparison) {    // If grade is in the range [0,100] and greater than the previous array member
+                        examGrades[i] = grade;                                  // Assign the value of grade to examGrades[i]
+                        comparison = examGrades[i];                             // Reassign the value of comparison to be examGrades[i]
+                        i++;                                                    // Increment i by adding 1
                     }
-                    else {
-                        System.out.println("One of the grades entered was not in the range of [0,100].");
-                        resume = false;
-                        break;
+                    else {                                                      // Input is not an integer
+                        if (grade < 0 || grade > 100) {                         // If grade is not in the range [0,100]
+                            System.out.print("One of the grades entered was "); // Print out statements
+                            System.out.println ("not in the range of [0,100].");
+                            System.out.print("Please enter " + (15 - i));       // Ask user to enter remaining values needed
+                            System.out.print (" more entries. ");
+                            input = new Scanner(System.in);                     // Reinitalize input Scanner
+                        }
+                        else {                                                  // i is not in range [0,100]
+                            System.out.print("One of the grades entered");      // Print out statements
+                            System.out.print (" was not greater than or ");
+                            System.out.println ("equal to grade previous to it.");
+                            System.out.print("Please enter " + (15 - i));       // Ask user to enter remaining values needed
+                            System.out.print (" more entries. ");
+                            input = new Scanner(System.in);                     // Reinitalize input Scanner                
+                        }
                     }
                 }
-                else {
-                    System.out.println("One of the the grades entered was not an integer.");
-                    resume = false;
-                    break;
+                else {                                                          // Input is not an integer
+                    System.out.print("One of the the grades entered was ");     // Print out statenebt
+                    System.out.println("not an integer.");
+                    System.out.print("Please enter " + (15 - i));               // Ask user to enter remaining values needed
+                    System.out.print (" more entries. ");
+                    input = new Scanner(System.in);                             // Reinitalize input Scanner
                 }
             }
 
-            if (resume == false) {
-                System.out.println("The program will now exit.");
-                break;
+            System.out.println("Sorted: ");                                     // Print out statement
+            Arrays.sort(examGrades);                                            // Sort the array of exam grades
+
+            for (int number: examGrades) {                                      // For each member of the array examGrades
+                System.out.print(number + " ");                                 // Print out each value and a space
             }
 
-            /*resume = sortedCheck(examGrades);
+            System.out.println("");                                             // Print out a new line
+
+            System.out.print("Enter a grade to search for: ");                  // Ask the user for a grade to search for
+            searchGrade = input.nextInt();                                      // Assign the input to be the value of searchGrade
             
-             if (resume == false) {
-                System.out.println("The program will now exit.");
-                break;
-            } */
+            sortedSearch(examGrades, searchGrade);                              // Call method named sortedSearch to perform a binary search on examGrades to find a grade
 
-            System.out.println("Sorted: ");
-            Arrays.sort(examGrades);
-
-            for (int number: examGrades) {
-                System.out.print(number + " ");
+            for (i = 0; i < examGrades.length; i++) {                           // For loop --> Determine how to scramble the array
+                int target = (int)(examGrades.length * Math.random());          // Determine which member will be switched with examGrades[i]
+                int temp = examGrades[target];                                  // Assign the value of the randomly chosen array member to temp
+                examGrades[target] = examGrades[i];                             // Reassign the value in examGrades[target] to be the value in examGrades[i]
+                examGrades[i] = temp;                                           // Reassign the value in examGrades[i] to be the value in temp
             }
 
-            System.out.println("");
-
-            System.out.print("Enter a grade to search for: ");
-            int searchGrade = input.nextInt();
-            // Sorted --> Binary
-            sortedSearch(examGrades, searchGrade);
-            
-            for (int i = 0; i < examGrades.length; i++) {
-                int target = (int) (examGrades.length * Math.random());
-                int temp = examGrades[target];
-                examGrades[target] = examGrades[i];
-                examGrades[i] = temp;
+            for (int number: examGrades) {                                      // For each member of the array examGrades
+                System.out.print(number + " ");                                 // Print out each value and a space
             }
-            
-            for (int number: examGrades) {
-                System.out.print(number + " ");
-            }
-            
-            System.out.println ("");
-            
-            System.out.print("Enter a grade to search for: ");
-            searchGrade = input.nextInt();
-            scrambledSearch(examGrades, searchGrade);
-            
-            // Scrambled --> Linear
-            /* interation = scrambledSearch(examGrades, searchGrade);
 
-            System.out.println ("interation: " + interation); */
-            resume = false; 
-        }
+            System.out.println("");                                             // Print out a new line
+
+            System.out.print("Enter a grade to search for: ");                  // Ask the user for a grade to search for
+            searchGrade = input.nextInt();                                      // Assign the input to be the value of searchGrade
+            scrambledSearch(examGrades, searchGrade);                           // Call method named scrambledSearch to perform a linear search on examGrades to find a grade
     }
 }
