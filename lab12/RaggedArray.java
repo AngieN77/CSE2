@@ -40,7 +40,7 @@ public class RaggedArray {
         for (int i = 1; i < array.length; i++) {                                // For loop --> Keep track of which row is being sorted
             for (int j = i; j > 0; j--) {                                       // For loop --> Keep track of which row could be switched
                 if (array[j].length < array[j - 1].length) {                    // If sorted row length is less than row above
-                    int temp = array[j];                                        // Set temp to be row array[j]
+                    int temp[] = array[j];                                        // Set temp to be row array[j]
                     array[j] = array[j - 1];                                    // Reassign row array[j] to be row array[j - 1]
                     array[j - 1] = temp;                                        // Reassign row array[j - 1] to be row temp
                 }
