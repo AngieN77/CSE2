@@ -1,11 +1,9 @@
 // Angela Nguyen
 // Professor Brian Chen
 // April 22, 2016
-// Ragged Array Java Program
+// Holoporter Java Program
 
-// FIX PRINT METHOD!
-
-// Purpose: soRandom - Creates a 3D string array --> 2D string arrays inside --> 1D string arrays inside
+// Purpose: soRandom - Create a 3D string array --> 2D string arrays inside --> 1D string arrays inside
 //          coder - Generate a unique code of type XXYYYY
 //                  X - Letters from A - Z
 //                  Y - Numbers from 0 - 9
