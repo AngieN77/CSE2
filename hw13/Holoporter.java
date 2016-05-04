@@ -202,15 +202,11 @@ public class Holoporter {
 
         System.out.println("Original Container:");                              // Print out statement
         print(original);                                                        // Call print() method to print out original
-        System.out.println("\n \n");                                            // Print out two new lines
+        System.out.println("\n");                                            // Print out two new lines
 
         holder = holoport(original, holder);                                    // Call holoport() to transport codes from original to holder array
 
-        System.out.println("Holder Container:");                                // Print out statement
-        print(holder);                                                          // Call print() method to print out holder
-        System.out.println("\n \n");                                               // Print out a new line
-
-        while (true) {                                                          // While loop --> Ask user for a desired code in the correct format
+         while (true) {                                                          // While loop --> Ask user for a desired code in the correct format
             boolean valid = true;                                               // Declare and initialize a boolean variable named vaild to be true
             Scanner input = new Scanner(System.in);                             // Declare and initialize an instance of Scanner named input
             System.out.print("Please enter a code (XXYYYY) that is to be searched: ");  // Ask the user for a desired code to be searched for
@@ -248,7 +244,7 @@ public class Holoporter {
 
         percentage(original,holder);                                            // Call percentage() method to calculate the completion off holoportation
 
-        System.out.println ("\n");                                              // Print out a new line
+        System.out.println ("");                                              // Print out a new line
         
         frankenstein(original);                                                 // Call frankenstein() method to reorder row submembers and row members accordingly
         
